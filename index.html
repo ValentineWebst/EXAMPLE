@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine's Day</title>
+</head>
+<body>
+
+<h2>Will you be my valentine?</h2>
+<button onclick="checkResponse('yes')">Yes</button>
+<button onclick="checkResponse('no')">No</button>
+
+<audio id="valentineSong">
+  <source src="hanggang_kailan.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+function checkResponse(response) {
+    if (response === 'no') {
+        alert("Okay, playing 'Hanggang Kailan'...");
+        var audio = document.getElementById("valentineSong");
+        audio.play();
+    } else {
+        alert("Great! Happy Valentine's Day!");
+    }
+}
+</script>
+
+</body>
+</html>
