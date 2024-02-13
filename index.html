@@ -10,15 +10,25 @@
       text-align: center;
       margin: 0;
       padding: 0;
+      background-color: #f9f9f9;
     }
     h2 {
       margin-top: 50px;
+      color: #cc0066;
     }
     button {
       margin-top: 20px;
       padding: 10px 20px;
       font-size: 16px;
       cursor: pointer;
+      background-color: #ffcccc;
+      border: none;
+      border-radius: 5px;
+      color: #cc0066;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #ff99cc;
     }
     #valentineSong {
       display: none;
@@ -27,12 +37,12 @@
 </head>
 <body>
 
-  <h2>Will you be my valentine?</h2>
-  <button onclick="checkResponse('yes')">Yes</button>
-  <button onclick="checkResponse('no')">No</button>
+  <h2>Will you be my valentine? 💖</h2>
+  <button onclick="checkResponse('yes')">Yes ❤️</button>
+  <button onclick="checkResponse('no')">No 💔</button>
 
   <audio id="valentineSong">
-    <source src="New folder/song.mp3" type="mp3">
+    <source src="New folder/song.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
@@ -43,7 +53,7 @@
         var audio = document.getElementById("valentineSong");
         audio.play();
       } else {
-        alert("Great! Happy Valentine's Day!");
+        alert("Great! Happy Valentine's Day! 💖");
       }
     }
   </script>
